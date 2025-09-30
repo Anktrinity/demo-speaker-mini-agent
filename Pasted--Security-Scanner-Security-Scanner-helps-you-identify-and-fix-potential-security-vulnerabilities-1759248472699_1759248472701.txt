@@ -1,0 +1,81 @@
+# Security Scanner
+
+> Security Scanner helps you identify and fix potential security vulnerabilities in your application before publishing.
+
+<Frame>
+  <img src="https://mintcdn.com/replit/0UCOQvZyQpUEM03B/images/security-scanner/bgs%20%5Bteal%5D.png?fit=max&auto=format&n=0UCOQvZyQpUEM03B&q=85&s=cc3c801265dc22228b543e7348df9759" alt="Security Scanner interface showing vulnerability scan results" data-og-width="1920" width="1920" data-og-height="1080" height="1080" data-path="images/security-scanner/bgs [teal].png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/replit/0UCOQvZyQpUEM03B/images/security-scanner/bgs%20%5Bteal%5D.png?w=280&fit=max&auto=format&n=0UCOQvZyQpUEM03B&q=85&s=d519ed0a4f25fbe3d8317bd1e25def08 280w, https://mintcdn.com/replit/0UCOQvZyQpUEM03B/images/security-scanner/bgs%20%5Bteal%5D.png?w=560&fit=max&auto=format&n=0UCOQvZyQpUEM03B&q=85&s=42c788bffc845cc8cf81f962a358a86e 560w, https://mintcdn.com/replit/0UCOQvZyQpUEM03B/images/security-scanner/bgs%20%5Bteal%5D.png?w=840&fit=max&auto=format&n=0UCOQvZyQpUEM03B&q=85&s=41ef680134ad40cd8ea0a2260c55ccbf 840w, https://mintcdn.com/replit/0UCOQvZyQpUEM03B/images/security-scanner/bgs%20%5Bteal%5D.png?w=1100&fit=max&auto=format&n=0UCOQvZyQpUEM03B&q=85&s=7188393d327c74f91dde6b71d3b021e3 1100w, https://mintcdn.com/replit/0UCOQvZyQpUEM03B/images/security-scanner/bgs%20%5Bteal%5D.png?w=1650&fit=max&auto=format&n=0UCOQvZyQpUEM03B&q=85&s=8bc1d83b4eab0755155be35d98571cec 1650w, https://mintcdn.com/replit/0UCOQvZyQpUEM03B/images/security-scanner/bgs%20%5Bteal%5D.png?w=2500&fit=max&auto=format&n=0UCOQvZyQpUEM03B&q=85&s=fd59ab46bc5ba998b49c210fdd34db2d 2500w" />
+</Frame>
+
+<Note>
+  Security Scanner is currently still in beta. While it is powerful, it may occasionally report false positives or miss some issues. Review the results and use your judgment when addressing reported issues.
+</Note>
+
+## What is Security Scanner?
+
++Security Scanner is a tool that analyzes your dependencies and code for potential security vulnerabilities. Code analysis is powered by [Semgrep](https://semgrep.dev/) Community Edition.
+
+It helps you:
+
+* Identify common security issues before publishing
+* Fix vulnerabilities with the Agent
+* Build more secure applications
+
+## What is a security vulnerability?
+
+A security vulnerability is like a weak spot in your application that could potentially be exploited. Think of it as leaving a window unlocked in your house - while it might not cause problems immediately, it's better to know about it and fix it before someone takes advantage of it.
+
+Here are some common examples of security vulnerabilities:
+
+* **Hard-coded credentials**: Having passwords or API keys directly in your code
+  ```javascript
+  // Vulnerable code
+  const apiKey = "sk_live_123456789";
+  ```
+
+* **SQL Injection**: When user input isn't properly sanitized before being used in database queries
+  ```javascript
+  // Vulnerable code
+  const query = `SELECT * FROM users WHERE username = '${userInput}'`;
+  ```
+
+* **Cross-Site Scripting (XSS)**: When user input is rendered as HTML without proper sanitization
+  ```javascript
+  // Vulnerable code
+  element.innerHTML = userInput; // Could contain malicious JavaScript
+  ```
+
+* **Insecure dependencies**: When your application relies on vulnerable packages
+  ```json
+  {
+    "dependencies": {
+      "express": "^4.18.2" // Vulnerable version of Express
+    }
+  }
+  ```
+
+The Security Scanner helps you identify these and other potential issues in your code before they can be exploited. When it finds a vulnerability, you can ask the Agent to fix it, making it easier to maintain a robust and secure application.
+
+## Getting started
+
+You can access the Security Scanner in two ways:
+
+1. From the Deployments pane
+2. By searching for "Security Scanner" in the workspace search tool
+
+<Note>
+  The scanner doesn't run automatically during publishing - you'll need to initiate it manually when you're ready to check your code.
+</Note>
+
+## Understanding scan results
+
+Not all vulnerabilities require immediate attention. For example:
+
+* A low-severity issue like using an older version of a package in a development environment might not need immediate fixing
+* Some warnings might be false positives or related to test code
+* You can still publish your application even if some non-critical vulnerabilities are present
+
+## Next steps
+
+* Learn about [Publishing](/category/replit-deployments) to understand how Security Scanner fits into the publishing process
+* Explore [Replit AI](/replitai/agent) to see how the Agent can help fix security vulnerabilities
+* Check out [Workspace Features](/category/workspace-features) for more tools to enhance your development experience
