@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+
+{% block title %}About - Mini AI Speaker Agent{% endblock %}
+
+{% block extra_css %}
+<style>
+    .about-section {
+        margin-bottom: 40px;
+    }
+
+    .about-section h2 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 10px;
+    }
+
+    .about-section h3 {
+        color: #34495e;
+        margin: 20px 0 10px 0;
+    }
+
+    .about-section ul {
+        margin-left: 20px;
+        line-height: 1.8;
+    }
+
+    .about-section li {
+        margin-bottom: 8px;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .feature-card {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #3498db;
+    }
+
+    .feature-card h4 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    .config-box {
+        background: #ecf0f1;
+        padding: 20px;
+        border-radius: 5px;
+        font-family: 'Courier New', monospace;
+        margin: 15px 0;
+    }
+
+    .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffeeba;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 15px 0;
+    }
+
+    .success-box {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 15px 0;
+    }
+
+    code {
+        background: #2c3e50;
+        color: #ecf0f1;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="about-section">
+    <h2>What This Tool Does</h2>
+    <p>The Mini AI Speaker Agent transforms messy, inconsistent speaker packets into standardized, professional outputs ready for:</p>
+    <ul>
+        <li>Event registration systems (Cvent, Swoogo, Stova, Whova)</li>
+        <li>Mobile event apps</li>
+        <li>Marketing materials</li>
+        <li>Program books and websites</li>
+    </ul>
+</div>
+
+<div class="about-section">
+    <h2>Features & Outputs</h2>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h4>📝 Three Bio Formats</h4>
+            <ul>
+                <li>50-word (program book)</li>
+                <li>100-word (website)</li>
+                <li>1-sentence (emcee intro)</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h4>🎯 Session Content</h4>
+            <ul>
+                <li>75-word abstract</li>
+                <li>3 key takeaways</li>
+                <li>Attendee-focused language</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h4>♿ Accessibility</h4>
+            <ul>
+                <li>WCAG-compliant alt text</li>
+                <li>Professional descriptions</li>
+                <li>Ready for screen readers</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h4>✅ Quality Control</h4>
+            <ul>
+                <li>Headshot validation</li>
+                <li>Tech requirements check</li>
+                <li>Buzzword detection</li>
+                <li>Name mismatch alerts</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="about-section">
+    <h2>How to Use</h2>
+
+    <h3>1. Choose Your Mode</h3>
+    <ul>
+        <li><strong>Single Speaker:</strong> Process one speaker at a time</li>
+        <li><strong>Batch Processing:</strong> Handle multiple speakers in one go</li>
+    </ul>
+
+    <h3>2. Upload Content</h3>
+    <ul>
+        <li>Enter speaker name and bio (any length, any format)</li>
+        <li>Upload headshot (JPG, PNG, HEIC, etc.)</li>
+        <li>Add session title and description</li>
+        <li>Include tech requirements (optional)</li>
+    </ul>
+
+    <h3>3. Process & Download</h3>
+    <ul>
+        <li>Click "Process Speaker Content"</li>
+        <li>Download the Excel file with all formatted content</li>
+        <li>Review the Quality Control sheet for any issues</li>
+    </ul>
+</div>
+
+<div class="about-section">
+    <h2>Edge Cases We Handle</h2>
+    <ul>
+        <li>✓ Multiple speakers in one batch</li>
+        <li>✓ Headshot filename doesn't match speaker name</li>
+        <li>✓ Bio is 3 pages long (or just 2 sentences)</li>
+        <li>✓ Vague session descriptions ("inspiring talk on leadership")</li>
+        <li>✓ Missing tech requirements</li>
+        <li>✓ Non-English characters in names</li>
+    </ul>
+</div>
+
+<div class="about-section">
+    <h2>Tone & Style Rules</h2>
+
+    <div class="success-box">
+        <strong>We enforce:</strong>
+        <ul>
+            <li>Professional but approachable language</li>
+            <li>Active voice only</li>
+            <li>Attendee-centric focus (what they'll learn)</li>
+            <li>Clear, concise writing</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <strong>We flag these buzzwords:</strong>
+        <ul>
+            <li>Synergy, thought leader, rockstar, ninja, guru</li>
+            <li>Disruptive, paradigm shift, game-changer</li>
+            <li>Innovator, visionary (when overused)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="about-section">
+    <h2>Configuration</h2>
+    <p>Word limits and style rules can be customized in <code>config.py</code>:</p>
+
+    <div class="config-box">
+# Current Settings:<br>
+• Short bio: {{ config.BIO_LIMITS.short }} words<br>
+• Medium bio: {{ config.BIO_LIMITS.medium }} words<br>
+• Session abstract: {{ config.SESSION_LIMITS.abstract }} words<br>
+• Key takeaways: {{ config.SESSION_LIMITS.takeaways }} items<br>
+• Max bio length: {{ config.MAX_BIO_WORDS }} words
+    </div>
+</div>
+
+<div class="about-section">
+    <h2>Excel Output</h2>
+    <p>The generated Excel file includes three sheets:</p>
+    <ul>
+        <li><strong>Processing Info:</strong> Summary of the processing run</li>
+        <li><strong>Speaker Content:</strong> All formatted content ready to copy/paste</li>
+        <li><strong>Quality Control:</strong> Detailed checklist and warnings for each speaker</li>
+    </ul>
+</div>
+
+<div class="about-section">
+    <h2>Technical Details</h2>
+    <ul>
+        <li><strong>AI Model:</strong> Claude Sonnet 4.5 (latest)</li>
+        <li><strong>Framework:</strong> Flask (Python)</li>
+        <li><strong>Export Format:</strong> Excel (.xlsx)</li>
+        <li><strong>Max File Size:</strong> 10MB per upload</li>
+    </ul>
+</div>
+
+<div style="text-align: center; margin-top: 40px;">
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Start Processing Speakers</a>
+</div>
+{% endblock %}
