@@ -1,0 +1,146 @@
+# DEMO QUICK REFERENCE CARD
+## Speaker Content Processor Agent - Live Build
+
+**Print this and keep it on your laptop or podium during the session**
+
+---
+
+## PRE-SESSION CHECKLIST
+- [ ] Claude Code open (or claude.ai in browser)
+- [ ] Screen share working
+- [ ] speaker_packet_jane_smith.txt on Desktop
+- [ ] speaker_packet_mike_chen.txt on Desktop
+- [ ] Speaker_Content_Processor_Instructions.txt open for copy-paste
+- [ ] Backup video ready (just in case)
+- [ ] Font size LARGE (audience needs to see the screen)
+
+---
+
+## DEMO FLOW (8 minutes total)
+
+### STEP 1: SETUP (2 min)
+- Open Claude Code
+- Create new project: "Speaker Packet Agent"
+- Set scenario: "Speakers send chaos. What if AI handled it?"
+
+### STEP 2: UPLOAD JANE SMITH PACKET (1 min)
+- Show messy bio on screen (buzzwords, vague session description)
+- Call out: "Dynamic thought leader. Leveraging synergies. This is a Mad Lib."
+- Drag + drop file into Claude Code
+
+### STEP 3: PASTE INSTRUCTIONS (2 min)
+- Copy from Speaker_Content_Processor_Instructions.txt
+- Paste into Claude Code
+- Highlight key sections:
+  - 3 bio formats
+  - Session abstract + takeaways
+  - Alt text
+  - Quality checklist
+  - BANNED WORDS (crowd favorite)
+- Say: "That's the whole instruction set. Plain English."
+- Hit Enter
+
+### STEP 4: SHOW OUTPUT (3 min)
+**Read aloud as it appears:**
+- 50-word bio: "No buzzwords. Specific companies. Human detail."
+- 1-sentence intro: "Speakable. Hand this to your emcee."
+- Session abstract: "Tells attendees what they GET, not what speaker will 'share.'"
+- Alt text: "WCAG compliant. Your reg system needs this."
+- Quality checklist: "Agent is doing QA for you. Flags missing tech requirements."
+- Export table: "Copy-paste straight into Cvent. No reformatting."
+
+**Turn to room:** "That took 90 seconds. That is workflow automation."
+
+### STEP 5: TEST LIVE (2 min)
+- Ask room: "Shout out a speaker name and topic!"
+- Upload Mike Chen packet (or adapt to whatever they shout)
+- Agent processes faster (instructions already set)
+- Point out: "Name mismatch flag—filename doesn't match speaker name. QA at 11pm."
+
+**Turn to room:** "No babysitting. Just output."
+
+---
+
+## KEY TALKING POINTS
+
+**When showing instructions:**
+"No coding. Just clear English telling the AI what good work looks like."
+
+**When output appears:**
+"Same quality. Same format. Every time."
+
+**When quality checklist appears:**
+"The agent is flagging what's missing so you know exactly what follow-up emails to send."
+
+**When showing second packet:**
+"If I wanted to process 50 speakers? I upload 50 packets. Same result every time."
+
+**Transition to Exercise 3:**
+"If you can upload a file, you can build an agent like this today."
+
+---
+
+## IF TECH FAILS
+
+**Stay calm. Smile.**
+
+"Alright, we're having a live demo moment. This is WiFi at a conference venue."
+
+**Play backup video:**
+"Let me show you what this looks like when it runs smoothly..."
+
+**After video:**
+"The point stands: if you can upload a file, you can build this. Instructions are in the slide deck."
+
+---
+
+## EXERCISE 3 TRANSITION (After demo)
+
+"Here's how you replicate this tonight:
+1. Download Claude Code—free at claude.ai
+2. Create new project
+3. Copy the instruction set (it's in the slides)
+4. Upload your first messy speaker packet
+5. Done.
+
+Now, turn to your partner..."
+
+---
+
+## HUMOR BEATS (Use these naturally)
+
+**When showing messy bio:**
+"'Dynamic thought leader who leverages synergies.' This reads like a Mad Lib written by a corporate intern at 2am."
+
+**When showing missing tech requirements:**
+"Three weeks from now, I'm getting an email: 'Hey, do you have a confidence monitor? Also, I need a standing desk. And a specific brand of sparkling water.'"
+
+**When showing name mismatch flag:**
+"That's the kind of detail a human would miss at 11pm when you're uploading 47 headshots and half of them are named 'IMG_1234.jpg.'"
+
+---
+
+## FILES ON DESKTOP (Have these ready)
+
+1. speaker_packet_jane_smith.txt
+2. jane_smith_headshot.jpg
+3. speaker_packet_mike_chen.txt
+4. speaker_photo_2024.jpg (intentionally misnamed)
+5. Speaker_Content_Processor_Instructions.txt
+6. Backup_Demo_Video.mp4
+
+---
+
+## TIMING REMINDERS
+
+- Setup: 2 min (don't rush the scenario)
+- Upload Jane: 1 min (show the mess, get laughs)
+- Instructions: 2 min (highlight banned words list)
+- Output: 3 min (read key sections aloud, make them visceral)
+- Test live: 2 min (fast, shows reusability)
+
+**Total: 10 min scheduled (8 min if smooth, 2 min buffer)**
+
+---
+
+**YOU'VE GOT THIS. The room will gasp when the output appears.**

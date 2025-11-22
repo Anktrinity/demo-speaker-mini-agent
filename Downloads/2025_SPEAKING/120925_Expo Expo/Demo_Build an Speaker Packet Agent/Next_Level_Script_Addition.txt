@@ -1,0 +1,201 @@
+# "NEXT LEVEL" SCRIPT ADDITION
+## Insert this after Step 5 of the Speaker Content Processor Demo
+
+**Timing: 60 seconds**
+**Placement: Right after "If you can upload a file, you can build an agent like this today."**
+
+---
+
+## THE SETUP
+
+**[After showing the Mike Chen packet output, turn back to the room]**
+
+"Alright, so now I've got clean content. 50-word bio, 100-word bio, session abstract, alt text, the whole package. It's in this table, ready to go."
+
+**[Pause. Gesture to the screen showing the table output.]**
+
+"But here's the thing: I still have to copy-paste this into six different places. My website. My event app. My email drip campaign. My social scheduler. My printed program Google Sheet. My team Slack channel."
+
+**[Pause.]**
+
+"That's still six manual steps. And if I'm processing 50 speakers? That's 300 copy-pastes. At some point, I'm going to paste the wrong bio into the wrong speaker profile, and Jane Smith is suddenly an expert in cybersecurity."
+
+**[Pause for laughs.]**
+
+"So here's the next evolution."
+
+---
+
+## THE VISION (No live demo, just describe it)
+
+**[Advance slide: Workflow diagram showing Agent → Make/n8n → Multiple destinations]**
+
+**OR if you don't have a slide ready:**
+
+**[Gesture broadly, paint the picture with words]**
+
+"What if this agent's output automatically triggered a workflow that:
+
+One: Posts the 100-word bio to my WordPress event page.
+
+Two: Updates my event app via API—Whova, Swoogo, whatever system you're using.
+
+Three: Generates a social card with the speaker's headshot, name, and session title—ready to post.
+
+Four: Adds the speaker to my email drip campaign so they get their 'Welcome to the event' email with the right info.
+
+Five: Drops all the content into a Google Sheet that feeds my printed program.
+
+Six: Sends a Slack notification to my team: 'Speaker packet processed. Jane Smith is live on the website.'
+
+One upload. Six systems updated. Zero copy-paste."
+
+**[Pause. Let that land.]**
+
+---
+
+## THE TOOLS
+
+"You can build this using tools like **Make** or **n8n**—they're no-code workflow automation platforms. Think Zapier, but more powerful and cheaper for complex workflows."
+
+**[Advance slide if you have logos/screenshots of Make and n8n]**
+
+**OR continue without slide:**
+
+"Make and n8n let you connect your agent's output to basically any platform that has an API. Your website CMS. Your event app. Your email system. Your social scheduler. Even your AV production tool if you want to auto-generate lower-third graphics for livestreams."
+
+**[Pause.]**
+
+"I'm not going to build this live right now because we'd need API keys, webhooks, and about 20 minutes of troubleshooting conference WiFi."
+
+**[Pause for laughs.]**
+
+"But I've already built a few of these workflows—one for speaker content, one for sponsor deliverables tracking, one for post-event survey analysis—and they're part of the resource package I'm sending everyone who gave me feedback earlier."
+
+**[Gesture to the Talkadot QR code if it's still on screen, or just reference it verbally.]**
+
+---
+
+## THE PIVOT BACK TO EXERCISE
+
+"So here's where you are right now:
+
+You can build an AI agent that cleans up messy content—tonight, for free, in under an hour.
+
+And then, when you're ready, you can layer on the workflow automation that pushes that content everywhere it needs to go—automatically.
+
+That's the progression. Tool. Agent. Workflow. Each step multiplies your leverage."
+
+**[Pause.]**
+
+"Alright, let's put this into practice. Turn to your partner..."
+
+**[Continue to Exercise 3: "What Would Your Agent Do?"]**
+
+---
+
+## OPTIONAL: If You Want to Show a Quick Visual
+
+**[If you have a pre-recorded 30-second video or a workflow screenshot:]**
+
+"Let me show you what this looks like in action. This is a Make workflow I built for a client last month."
+
+**[Play 30-second video or show screenshot of workflow with boxes and arrows]**
+
+**[Narrate over it:]**
+
+"Agent processes speaker packet. Output goes to Make. Make splits the data and sends it to five destinations at once. WordPress gets the bio. Event app gets the session info. Bannerbear generates the social card. Mailchimp adds them to the email list. Google Sheets logs it for the printed program."
+
+**[Video/screenshot ends.]**
+
+"One trigger. Five destinations. That's workflow automation."
+
+**[Continue to pivot back to Exercise.]**
+
+---
+
+## KEY MESSAGING POINTS
+
+**"One upload. Six systems updated. Zero copy-paste."**  
+→ This is the money line. Repeat it.
+
+**"Make and n8n—think Zapier, but more powerful and cheaper."**  
+→ Gives them specific tool names to Google later.
+
+**"I'm not building this live because we'd need API keys and 20 minutes of troubleshooting WiFi."**  
+→ Pre-empts the "why aren't you showing us?" question. Makes it relatable (conference WiFi sucks).
+
+**"You can build the agent tonight. You can add the workflow layer when you're ready."**  
+→ Keeps it progressive. They don't have to do everything at once.
+
+---
+
+## SLIDE RECOMMENDATION (Optional)
+
+**Slide Title:** "What's Next: Full Workflow Automation"
+
+**Visual:**
+- Simple diagram showing:
+  - [Agent] → [Make/n8n] → [WordPress] [Event App] [Social Cards] [Email] [Google Sheets] [Slack]
+- OR just text bullets:
+  - ✅ Agent cleans content
+  - ✅ Make/n8n distributes it
+  - ✅ 6 systems updated automatically
+  - ✅ Zero copy-paste
+
+**No need for a fancy graphic—simple boxes and arrows work.**
+
+---
+
+## IF YOU DON'T HAVE TIME FOR A SLIDE
+
+Just describe it. The words are vivid enough:
+
+"One upload. Six systems. Automatic."
+
+"Your website updates. Your event app updates. Social card generates. Email sends. Google Sheet logs it. Slack notifies your team."
+
+"That's the evolution from AI tool to AI worker."
+
+---
+
+## WHAT TO INCLUDE IN THE TALKADOT RESOURCE PACKAGE
+
+Mention this when you reference the bonus resources:
+
+"The resource package includes:
+- The Speaker Content Processor agent instructions (so you can replicate what we just built)
+- Three pre-built Make/n8n workflow templates:
+  - Speaker content automation
+  - Sponsor deliverables tracking
+  - Post-event survey analysis
+- Beta access to my Slack AI Task Manager
+
+Scan the QR, give me feedback, and I'll send it all before you leave the room."
+
+---
+
+**END OF ADDITION**
+
+---
+
+## INTEGRATION INTO YOUR DEMO SCRIPT
+
+This 60-second addition fits right after:
+
+**Current Demo Step 5 ends with:**
+"If you can upload a file, you can build an agent like this today."
+
+**Then add:**
+[THE SETUP] → [THE VISION] → [THE TOOLS] → [THE PIVOT]
+
+**Then continue to:**
+Exercise 3: "Turn to your partner. If you could build an AI agent for one other chaos point in your workflow, what would it be?"
+
+---
+
+**Total added time: 60 seconds (90 seconds if you show a video)**
+
+**Total demo time: 8 min (agent build) + 1 min (next level vision) = 9 min**
+
+**Still fits within your 12-min Section 3 allocation.**

@@ -373,6 +373,9 @@
     </div>
 
     <script>
+        // Global variables
+        let currentDownloadInfo = null;
+
         // Load existing output files on page load
         loadOutputFiles();
 
@@ -424,6 +427,13 @@
 
                 let downloadHtml = '';
                 if (data.download_url) {
+                    // Store download info globally
+                    currentDownloadInfo = {
+                        url: data.download_url,
+                        filename: data.output_file,
+                        speakers: data.speakers
+                    };
+
                     downloadHtml = `
                         <div class="download-section">
                             <strong>📊 Excel File Ready!</strong>
@@ -605,11 +615,45 @@
                 contentHtml += speakerContent;
             });
 
-            contentDiv.innerHTML = tabsHtml + contentHtml;
+            // Add a "Back to Downloads" section at the top with current download info
+            let downloadInfoHtml = '';
+            if (currentDownloadInfo) {
+                downloadInfoHtml = `
+                    <p style="margin: 10px 0 5px 0; color: #666;">Latest processed file: <strong>${currentDownloadInfo.filename}</strong></p>
+                    <a href="${currentDownloadInfo.url}" download style="background: #28a745; color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none; display: inline-block; margin-right: 10px;">
+                        📥 Download Current File
+                    </a>
+                `;
+            }
+
+            const backToDownloadsHtml = `
+                <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid #2196f3;">
+                    <strong>📥 Downloads Available</strong>
+                    ${downloadInfoHtml}
+                    <div style="margin-top: 10px;">
+                        <button onclick="scrollToResults()" style="background: #2196f3; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; margin-right: 10px;">
+                            📊 Back to Results Section
+                        </button>
+                        <button onclick="loadOutputFiles(); scrollToOutputFiles()" style="background: #4a90e2; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">
+                            📁 View All Generated Files
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            contentDiv.innerHTML = backToDownloadsHtml + tabsHtml + contentHtml;
             socialDiv.style.display = 'block';
 
             // Scroll to social posts
             socialDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToResults() {
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToOutputFiles() {
+            document.getElementById('outputFiles').parentElement.scrollIntoView({ behavior: 'smooth' });
         }
 
         function showSpeakerPosts(speakerIndex) {

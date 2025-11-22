@@ -1,0 +1,290 @@
+# LIVE DEMO SCRIPT: Building the Speaker Content Processor Agent
+
+**Total Time: 8 minutes**
+
+---
+
+## PRE-DEMO SETUP (Do this BEFORE the session)
+
+### Checklist:
+- [ ] Claude Code installed on laptop (or Claude.ai open in browser)
+- [ ] Laptop connected to projector/screen share tested
+- [ ] speaker_packet_jane_smith.txt saved to Desktop (with headshot image)
+- [ ] speaker_packet_mike_chen.txt saved to Desktop (with headshot image)
+- [ ] Speaker_Content_Processor_Instructions.txt open in a text editor for easy copy-paste
+- [ ] Backup video recorded and ready (just in case)
+- [ ] WiFi connection verified
+- [ ] Screen brightness/font size increased for visibility
+
+---
+
+## STEP 1: SETUP THE SCENARIO (2 min)
+
+**[After Breathing Break #1, transition to laptop]**
+
+"Alright, phones down. Let's build an agent."
+
+**[Pull up laptop. Make sure screen share is live and visible to room.]**
+
+"Now we're moving from prompting to power. Text generation is entry-level. What I want to show you is how AI can become a worker in your event workflow—something that actually performs jobs without you babysitting it."
+
+"Let's build a micro-agent together. In under five minutes. No coding degree required."
+
+**[Open Claude Code on screen. Show the clean interface.]**
+
+"I'm using Claude Code—Anthropic's desktop app. It's free if you have a Claude account. You can also do this in the browser at claude.ai. I prefer the desktop app because it's faster and doesn't eat my browser tabs."
+
+**[Click "New Project" in Claude Code]**
+
+"I'm creating a new project. I'll call it 'Speaker Packet Agent.'"
+
+**[Type project name, hit enter. Project opens.]**
+
+"Here's the scenario: You run events. Every event has speakers. Every speaker sends you a bio, a headshot, sometimes a novel, sometimes chaos. And every time, you rewrite the bio, extract a short version, format the headshot, send reminders, update your spreadsheet, update your app, update your signage… over and over."
+
+**[Pause. Make eye contact with room.]**
+
+"What if an AI agent handled all of that?"
+
+---
+
+## STEP 2: UPLOAD FIRST SPEAKER PACKET (1 min)
+
+**[Navigate to Desktop, show speaker_packet_jane_smith.txt file]**
+
+"Here's a real speaker packet I got last month. Names changed to protect the guilty."
+
+**[Open the file briefly so they can see the messy bio on screen for 3 seconds]**
+
+"Look at this bio. 'Dynamic thought leader.' 'Leveraging synergies.' 'Game-changing results.' This reads like a Mad Lib written by a corporate communications intern at 2am."
+
+**[Pause for laughs.]**
+
+"And look—session description says 'Join us for an inspiring talk.' That tells attendees absolutely nothing."
+
+"Also, no tech requirements listed. So three weeks from now, I'm going to get an email: 'Hey, do you have a confidence monitor? Also, I need a standing desk. And a specific brand of sparkling water.'"
+
+**[Close preview. Drag and drop the file + headshot into Claude Code chat.]**
+
+"I'm uploading this packet and the headshot. Watch what happens next."
+
+---
+
+## STEP 3: GIVE THE AGENT ITS INSTRUCTIONS (2 min)
+
+**[Switch to your text editor with the Speaker_Content_Processor_Instructions.txt file]**
+
+"Now I'm going to give this agent its job description. This is the only 'code' we're writing—and it's just plain English instructions."
+
+**[Copy the full instruction set from the text file]**
+
+**[Paste it into Claude Code chat]**
+
+**[On screen, the instructions appear. Scroll slowly so they can see the structure but don't read every word aloud. Highlight key sections:]**
+
+"Look at what I'm telling it to do:
+
+1. Rewrite the bio into three formats: 50 words, 100 words, 1-sentence intro.
+2. Rewrite the session description into a 75-word abstract with three key takeaways.
+3. Generate alt text for the headshot for accessibility.
+4. Create a quality control checklist—flag missing tech requirements, vague descriptions, name mismatches.
+5. Export everything in a table I can paste straight into Cvent or Swoogo."
+
+**[Scroll down to the BANNED WORDS section]**
+
+"And here's my favorite part: I gave it a banned words list. 'Synergy,' 'thought leader,' 'disrupt,' 'leverage'—all the corporate buzzwords that make attendees' eyes glaze over. If the original bio has those words, the agent rewrites them into something specific and concrete instead."
+
+**[Pause.]**
+
+"That's it. That's the whole instruction set. No coding. No API keys. Just clear English telling the AI exactly what good work looks like."
+
+**[Hit Enter. Show the agent starting to process.]**
+
+"Now watch."
+
+---
+
+## STEP 4: SHOW THE OUTPUT (3 min)
+
+**[Agent processes. Output appears on screen. Read key sections aloud as they appear:]**
+
+**[When the 50-word bio appears:]**
+
+"Look at this. 50-word bio: 'Jane Smith is a customer experience strategist who has led transformation projects for Fortune 500 companies including Microsoft and Adobe. She specializes in turning complex feedback into actionable roadmaps. Jane lives in Portland with two rescue dogs and an impressive collection of event badges.'
+
+Professional. Specific. No buzzwords. One personal detail that makes her human."
+
+**[When the 1-sentence intro appears:]**
+
+"Emcee intro: 'Please welcome Jane Smith, a customer experience strategist who's helped companies like Microsoft turn messy feedback into winning strategies.'
+
+That's speakable. You can hand that to your emcee and they won't stumble over it."
+
+**[When the session abstract appears:]**
+
+"Session abstract: 'In this session, you'll learn how to transform vague attendee feedback into clear, actionable improvements for your next event. Jane will walk through a three-step framework for analyzing survey data, identifying patterns, and building a roadmap your team can actually execute. You'll leave with a template you can use immediately.'
+
+See the difference? The original said 'inspiring talk.' This version tells attendees exactly what they're getting. Three concrete takeaways. A template they can use."
+
+**[When the alt text appears:]**
+
+"Alt text for accessibility: 'Professional headshot of Jane Smith, a woman with short brown hair wearing a navy blazer, smiling at the camera against a neutral gray background.'
+
+That follows WCAG guidelines. Your registration system needs this. Your mobile app needs this. And most speakers don't provide it."
+
+**[When the quality control checklist appears:]**
+
+"Quality control checklist:
+✅ Headshot: Yes
+❌ Tech requirements: Not specified - follow up needed
+❌ Session description: Original was too vague - rewrote based on available context
+✅ Bio length: Under 500 words
+
+The agent is doing QA for you. It's flagging what's missing so you know exactly what follow-up emails to send."
+
+**[When the table appears:]**
+
+"And here's the export table. I can copy this entire table and paste it straight into Cvent, Swoogo, Google Sheets, whatever system you're using. No reformatting. No manual entry."
+
+**[Turn back to the room.]**
+
+"That took 90 seconds. And this agent will do it for every speaker you upload from now on. Same quality. Same format. Every time."
+
+**[Pause.]**
+
+"That is not prompting. That is workflow automation."
+
+---
+
+## STEP 5: TEST IT LIVE WITH SECOND PACKET (2 min)
+
+**[Turn to the room]**
+
+"Let's test it with a different speaker packet. Someone from the room—shout out a fake speaker name and topic."
+
+**[Someone shouts something like: "Dr. Sarah Martinez, sustainable event design!" or "Alex Johnson, hybrid event tech!"]**
+
+"Perfect. Let me see if I have something close to that..."
+
+**[Quickly navigate to Desktop, show speaker_packet_mike_chen.txt file]**
+
+"Actually, I've got Dr. Mike Chen, cybersecurity expert. Let's use his packet."
+
+**[Upload the Mike Chen packet + headshot to the SAME Claude Code project]**
+
+**[Agent processes. Output appears much faster this time because the instructions are already set.]**
+
+**[Point to screen as output appears:]**
+
+"Look—same clean format. 50-word bio. 100-word bio. 1-sentence intro. Session abstract with three specific takeaways. Alt text. Quality checklist."
+
+**[When the quality checklist appears, point to the name mismatch flag:]**
+
+"And look at this—the agent caught something:
+
+🚨 Issues flagged: Headshot filename is 'speaker_photo_2024.jpg' but speaker name is Dr. Michael Chen - filename should be renamed to mike_chen_headshot.jpg for consistency.
+
+That's the kind of detail a human would miss at 11pm, three days before the event, when you're uploading 47 speaker headshots into your mobile app and half of them are named 'IMG_1234.jpg.'"
+
+**[Pause for laughs.]**
+
+"The agent is doing QA. It's checking your work. It's making sure your asset library stays organized."
+
+**[Turn back to room.]**
+
+"No babysitting. No manual reformatting. Just output. And if I wanted to process 50 speakers? I upload 50 packets. Same result every time."
+
+**[Pause.]**
+
+"If you can upload a file, you can build an agent like this today."
+
+---
+
+## TRANSITION TO EXERCISE 3 (30 seconds)
+
+**[Close laptop. Face the room.]**
+
+"Here's how you replicate this tonight:
+
+One: Download Claude Code—it's free at claude.ai. You can also do this in the browser.
+
+Two: Create a new project. Call it whatever you want—'Speaker Agent,' 'Content Processor,' doesn't matter.
+
+Three: Copy the instruction set I just showed you. I'll put it in the slides.
+
+Four: Upload your first messy speaker packet.
+
+Five: Done.
+
+You can tweak the instructions. You can add more output formats. You can make it check for DEI language, accessibility requirements, whatever you need. It's yours."
+
+**[Pause.]**
+
+"Now, turn to your partner..."
+
+---
+
+## IF TECH FAILS (BACKUP PLAN)
+
+**[If Claude Code crashes, internet drops, or agent produces garbage output:]**
+
+**[Stay calm. Smile.]**
+
+"Alright, we're having a live demo moment. This is what happens when you rely on WiFi at a conference venue."
+
+**[Pause for laughs.]**
+
+"Let me show you what this looks like when it runs smoothly..."
+
+**[Pull up the pre-recorded backup video. Play it. Narrate over it as needed.]**
+
+"This is the same build I just tried to show you live. You can see the instructions going in, the messy speaker packet uploading, and the clean output coming back in about 90 seconds."
+
+**[After video ends:]**
+
+"The point stands: if you can upload a file, you can build an agent like this. And I'll make sure you get the full instructions in the slide deck after this session."
+
+**[Continue to Exercise 3.]**
+
+---
+
+## TECH TROUBLESHOOTING CHECKLIST
+
+**If Claude Code is slow:**
+- "The agent is thinking through 300 words of messy bio and rewriting it into three clean formats. This takes about 30 seconds."
+- Keep talking, fill the silence with narration
+
+**If output has errors:**
+- "Interesting—it kept one buzzword. Let me show you how to refine the instructions..."
+- Turn it into a teaching moment about iteration
+
+**If upload fails:**
+- "Let me try a different file format..." (have a backup PDF version ready)
+
+**If internet drops:**
+- Immediately pivot to backup video: "This is why we always have a Plan B..."
+
+---
+
+## POST-DEMO DEBRIEF
+
+After Exercise 3, when people share their ideas for other agents, tie their answers back to the demo:
+
+- "That's exactly the same structure—clear instructions, specific outputs, quality checks."
+- "You just described a worker, not a tool. That's the shift."
+- "You could build that tonight using the same template."
+
+---
+
+## FILES YOU NEED ON DESKTOP FOR DEMO
+
+1. speaker_packet_jane_smith.txt
+2. jane_smith_headshot.jpg (or .png)
+3. speaker_packet_mike_chen.txt
+4. speaker_photo_2024.jpg (intentionally misnamed for the demo)
+5. Speaker_Content_Processor_Instructions.txt (for easy copy-paste)
+6. Backup_Demo_Video.mp4 (just in case)
+
+---
+
+**END OF DEMO SCRIPT**

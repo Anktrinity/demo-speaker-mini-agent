@@ -1,0 +1,43 @@
+SPEAKER INFORMATION FORM
+
+---
+
+SPEAKER NAME: Dr. Michael Chen
+
+BIO:
+Dr. Michael Chen is a cybersecurity expert specializing in event technology and mobile app security. He has spent the past decade helping event organizers protect attendee data and prevent security breaches at large-scale conferences and trade shows. Mike holds a Ph.D. in Computer Science from MIT and has published over 30 peer-reviewed papers on data privacy, encryption protocols, and threat detection. He currently serves as Chief Security Officer at EventTech Solutions, where he leads a team of 25 security professionals responsible for protecting data for over 500 events annually. Prior to EventTech Solutions, Mike worked as a security consultant for Google and Amazon Web Services. He has been featured in TechCrunch, Wired, and Forbes for his insights on cybersecurity best practices. Mike is a certified ethical hacker (CEH) and holds multiple industry certifications including CISSP and CISM.
+
+SESSION TITLE:
+Cybersecurity Best Practices for Event Apps: Protecting Your Attendees' Data
+
+SESSION DESCRIPTION:
+In this session, you'll learn practical strategies for securing your event app and protecting attendee data from increasingly sophisticated cyber threats. Dr. Chen will walk through real-world case studies of event security breaches, explain how attackers exploit common vulnerabilities in mobile apps and registration systems, and provide a step-by-step framework for implementing security protocols your team can execute immediately. Attendees will leave with a security audit checklist, vendor vetting questions, and recommendations for encryption standards that meet compliance requirements like GDPR and CCPA.
+
+TECH/AV REQUIREMENTS:
+- Projector with HDMI connection
+- Wireless lavalier microphone (headset preferred)
+- WiFi access for live demonstrations
+- Confidence monitor
+- Laptop connection for screen sharing (will bring own MacBook Pro with USB-C adapter)
+
+HEADSHOT:
+File attached: speaker_photo_2024.jpg
+
+DIETARY RESTRICTIONS:
+No shellfish
+
+ARRIVAL/DEPARTURE:
+Arriving June 14 at 2:30pm (United flight 1847)
+Departing June 16 at 11:00am (United flight 2156)
+
+SOCIAL MEDIA:
+Twitter/X: @drmikesec
+LinkedIn: linkedin.com/in/michael-chen-security
+
+---
+
+FILE SUBMITTED: 2025-01-18
+SUBMITTED BY: m.chen@eventtechsolutions.com
+
+NOTES FROM EVENT COORDINATOR:
+Headshot filename doesn't match speaker name - file is "speaker_photo_2024.jpg" but should probably be renamed to mike_chen_headshot.jpg for our asset library. Also need to confirm if he prefers "Dr. Michael Chen" or "Dr. Mike Chen" or just "Mike Chen" for name badge and mobile app.
