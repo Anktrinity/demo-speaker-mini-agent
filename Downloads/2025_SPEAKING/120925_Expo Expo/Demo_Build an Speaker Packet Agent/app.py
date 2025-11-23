@@ -66,13 +66,9 @@ def process_directory():
             except Exception as e:
                 return jsonify({'error': f'Error processing {os.path.basename(file_path)}: {str(e)}'}), 500
 
-        # Generate output filename with timestamp
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        output_filename = f'processed_speakers_{timestamp}.xlsx'
-        output_path = os.path.join(OUTPUT_FOLDER, output_filename)
-
-        # Export to Excel
-        full_path = processor.export_to_excel(results, output_path)
+        # Export to Excel (let the processor generate the speaker-named filename)
+        full_path = processor.export_to_excel(results)
+        output_filename = os.path.basename(full_path)
 
         return jsonify({
             'success': True,
@@ -129,13 +125,9 @@ def upload_files():
         if not results:
             return jsonify({'error': 'No valid speaker packet files found. Files should be named like "speaker_packet_*" with extensions: .txt, .docx, .pdf, .csv'}), 400
 
-        # Generate output filename
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        output_filename = f'processed_speakers_{session_id}_{timestamp}.xlsx'
-        output_path = os.path.join(OUTPUT_FOLDER, output_filename)
-
-        # Export to Excel
-        full_path = processor.export_to_excel(results, output_path)
+        # Export to Excel (let the processor generate the speaker-named filename)
+        full_path = processor.export_to_excel(results)
+        output_filename = os.path.basename(full_path)
 
         return jsonify({
             'success': True,

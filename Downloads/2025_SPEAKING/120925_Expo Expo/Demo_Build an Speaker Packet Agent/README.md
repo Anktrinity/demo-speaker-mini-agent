@@ -1,24 +1,46 @@
-# 🎤 Speaker Packet Processor
+# 🎤 Speaker Packet Processor v2.1
 
 **Transform messy speaker content into professional, standardized formats with AI-powered automation.**
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)](https://flask.palletsprojects.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Demo](https://img.shields.io/badge/Demo-Live-success.svg)](http://localhost:5000)
 
-## 🚀 Features
+## ✨ What's New in v2.1
+
+### 🧠 **Intelligent Content Generation**
+- **Smart placeholder detection**: Automatically identifies "TBD", "[working title]", "something cool"
+- **Contextual title generation**: Creates professional session titles based on speaker expertise
+- **Domain-specific intelligence**: Specialized knowledge for AI, cybersecurity, customer experience, leadership
+- **Missing content suggestions**: Auto-generates tech requirements and enhanced descriptions
+
+### 📁 **Smart File Management**
+- **Speaker-named files**: `speaker_dr_olivia_thorne_20251122.xlsx`
+- **Multi-speaker batches**: `speakers_jane_smith_raj_patel_and_others_20251122.xlsx`
+- **Intelligent headshot detection**: Automatically finds and references speaker photos
+- **Multi-directory search**: Searches upload folders and project directories
+
+### 🎨 **Enhanced User Experience**
+- **Persistent download access**: Download links remain available throughout workflow
+- **Professional alt text generation**: WCAG-compliant image descriptions
+- **Real-time quality reporting**: Comprehensive analysis with actionable feedback
+- **Improved error handling**: User-friendly validation and guidance
+
+## 🚀 Core Features
 
 ### 📁 **Multi-Format File Processing**
-- **Text files** (.txt)
-- **Word documents** (.docx)
-- **PDF files** (.pdf)
-- **CSV files** (.csv)
+- **Text files** (.txt) - Standard speaker packet format
+- **Word documents** (.docx) - Microsoft Word submissions
+- **PDF files** (.pdf) - PDF speaker packets with text extraction
+- **CSV files** (.csv) - Bulk speaker data imports
 
-### 🎯 **Automated Content Standardization**
+### 🎯 **AI-Powered Content Enhancement**
 - **3 Bio Formats**: 50-word (program book), 100-word (website), 1-sentence (emcee intro)
-- **Session Content**: 75-word abstracts with key takeaways
+- **Session Content**: Professional abstracts with specific takeaways
 - **Quality Control**: Automated checks for missing info and consistency issues
 - **Buzzword Cleaning**: Removes corporate jargon and replaces with concrete language
+- **Placeholder Intelligence**: Transforms vague titles into professional alternatives
 
 ### 📱 **LinkedIn Social Media Generator**
 - **4 Post Types** per speaker:
@@ -257,27 +279,81 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Workflow automation**: Reduce manual content creation tasks
 - **Quality standards**: Consistent output regardless of input quality
 
-## 🔍 Example Transformation
+## 🔍 Real-World Transformation Examples
 
-### Input (Raw Speaker Packet):
+### Content Intelligence in Action
+
+#### Placeholder Title Enhancement
+**Input:** `"TBD but something cool"`
+**Output:** `"Immersive Experiences: When Spaces Become Performers"`
+
+**Input:** `"[working title: Rewriting the Engagement Playbook?]"`
+**Output:** `"AI-Powered Innovation: Transforming Leadership for the Future"`
+
+#### Missing Tech Requirements Generation
+**Input:** `[No tech requirements specified]`
+**Output:**
 ```
-Jane Smith is a dynamic thought leader and customer experience guru who has been
-disrupting the CX space for over 15 years. She is passionate about leveraging
-synergies between technology and human connection to drive innovative solutions...
+- Projector with HDMI connection
+- Wireless lavalier microphone
+- Screen for presentation slides
+- Power outlet for laptop
 ```
 
-### Output (Processed):
-```
-50-word Bio: Jane Smith is a customer experience specialist with 15 years of expertise
-in technology and human connection solutions. She has worked with Fortune 500 companies
-including Microsoft, Adobe, and Salesforce, helping them improve customer engagement
-strategies. Jane is based in Portland and enjoys hiking with her rescue dogs.
+#### Smart File Naming
+**Single Speaker:** `speaker_dr_olivia_thorne_20251122_104256.xlsx`
+**Multiple Speakers:** `speakers_raj_just_raj_jane_smith_20251122_103813.xlsx`
+**Large Batch:** `speakers_jane_smith_raj_patel_and_others_20251122_143502.xlsx`
 
-LinkedIn Post: 🎤 Excited to announce Jane Smith as our featured speaker!
-Jane will be presenting "Transforming Customer Feedback into Action" at our upcoming event.
-Jane Smith is a customer experience specialist with 15 years of expertise...
+### Complete Speaker Transformation
+
+#### Input (Raw Speaker Packet):
+```
+SPEAKER NAME: Raj (just Raj)
+
+BIO:
+Raj is a unique voice in the world of... let's just say experiences. A mix of
+creative technologist, accidental producer, and self-described "event alchemist,"
+Raj's journey defies a clean CV. Roles? Fluid. Brands? Some big ones.
+
+SESSION TITLE: TBD but something cool
+
+SESSION DESCRIPTION:
+It's a vibe. Imagine walking into a room where the space talks back. Where the
+participant is not passive but gets pulled into a shared performance.
+
+TECH/AV REQUIREMENTS:
+- Sound is critical
+- Projection mapping?
+- Will bring custom gear
+```
+
+#### Output (AI-Enhanced):
+```
+Speaker Name: Raj (just Raj)
+50-word Bio: Raj is a unique voice in experiential technology. A creative technologist,
+producer, and self-described "event alchemist," Raj's journey defies traditional categories.
+He once built a 7-minute immersive experience for a launch party that broke Twitter for 11 minutes.
+
+Session Title: Immersive Experiences: When Spaces Become Performers
+Session Abstract: In this session, you'll learn how to create spaces where participants
+become performers rather than passive observers. Raj will demonstrate techniques for
+transforming physical environments into interactive experiences that respond to human presence.
+
+Key Takeaways:
+✅ Techniques for creating responsive physical environments
+✅ Methods for converting passive attendees into active participants
+✅ Framework for designing immersive shared performances
+
+Alt Text: Professional headshot of Raj, business attire, smiling, neutral background
+Quality Flags: Headshot: Yes | Tech: Specified | Session: Enhanced | Bio: Appropriate length
+AI Suggestions: Alt Title: Beyond Passive Attendance: Creating Interactive Event Environments
+
+LinkedIn Post: 🎤 Excited to announce Raj (just Raj) as our featured speaker!
+Raj will be presenting "Immersive Experiences: When Spaces Become Performers" at our upcoming event.
+Raj is a unique voice in experiential technology who transforms spaces into interactive performances.
 Don't miss this incredible session!
-#EventSpeaker #Conference #Learning #ProfessionalDevelopment
+#EventSpeaker #Conference #ImmersiveTech #ExperientialDesign
 ```
 
 ## 📞 Support

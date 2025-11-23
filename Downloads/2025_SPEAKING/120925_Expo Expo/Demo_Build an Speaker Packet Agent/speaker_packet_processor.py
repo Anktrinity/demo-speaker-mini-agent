@@ -116,9 +116,26 @@ class SpeakerPacketProcessor:
         tech_text = tech_match.group(1).strip() if tech_match else ""
         speaker_data['tech_requirements'] = tech_text if tech_text and tech_text != "[No response provided]" else ""
 
-        # Look for headshot reference
+        # Look for headshot reference in content first
         headshot_match = re.search(r'HEADSHOT:\s*\n.*?([^\/\n]+\.jpe?g)', content, re.IGNORECASE)
-        speaker_data['headshot_file'] = headshot_match.group(1).strip() if headshot_match else ""
+        if headshot_match:
+            speaker_data['headshot_file'] = headshot_match.group(1).strip()
+        else:
+            # If not found in content, search multiple directories for headshot files
+            directories_to_search = [
+                os.path.dirname(file_path) if file_path else '.',  # Upload folder
+                '.',  # Main project directory
+                os.path.join('..', '..') if 'uploads' in file_path else None  # Parent directory if in uploads
+            ]
+
+            found_headshot = ""
+            for directory_path in directories_to_search:
+                if directory_path and os.path.exists(directory_path):
+                    found_headshot = self.find_headshot_in_directory(speaker_data['name'], directory_path)
+                    if found_headshot:
+                        break
+
+            speaker_data['headshot_file'] = found_headshot
 
         return speaker_data
 
@@ -192,6 +209,44 @@ class SpeakerPacketProcessor:
             'abstract': abstract,
             'takeaways': takeaways
         }
+
+    def find_headshot_in_directory(self, speaker_name: str, directory_path: str = '.') -> str:
+        """Find headshot file in directory based on speaker name."""
+        import os
+        import glob
+
+        # Common image extensions
+        image_extensions = ['*.jpg', '*.jpeg', '*.png', '*.gif', '*.webp']
+
+        # Clean speaker name for matching
+        clean_name = speaker_name.lower().replace(' ', '_').replace('.', '').replace('(', '').replace(')', '').replace('dr_', '').replace('dr', '')
+        name_parts = clean_name.split('_')
+
+        # Look for files in the directory
+        for ext in image_extensions:
+            files = glob.glob(os.path.join(directory_path, ext))
+            for file_path in files:
+                filename = os.path.basename(file_path).lower()
+
+                # Direct name match (e.g., "dr. olivia thorne.jpeg" matches "Dr. Olivia Thorne")
+                if clean_name in filename.replace(' ', '_').replace('.', ''):
+                    return os.path.basename(file_path)
+
+                # Check if any part of speaker name is in filename
+                for part in name_parts:
+                    if len(part) > 2 and part in filename:  # Avoid matching single letters
+                        return os.path.basename(file_path)
+
+                # Check for common headshot patterns
+                headshot_patterns = ['headshot', 'speaker', 'photo']
+                for pattern in headshot_patterns:
+                    if pattern in filename:
+                        # Check if speaker name parts are also in filename
+                        for part in name_parts:
+                            if len(part) > 2 and part in filename:
+                                return os.path.basename(file_path)
+
+        return ""
 
     def create_alt_text(self, speaker_name: str, headshot_file: str) -> str:
         """Create alt text for headshot."""
@@ -622,7 +677,7 @@ Link in bio 👆
         from datetime import datetime
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         if output_file == "processed_speakers.xlsx":  # Default filename
-            output_file = f"{filename_base}_{timestamp}.xlsx"
+            output_file = f"outputs/{filename_base}_{timestamp}.xlsx"
 
         # Remove Generated Content from Excel export (keep for web interface)
         export_results = []
